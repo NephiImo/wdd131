@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+  /* Nav stays flex‑row; no change needed here if already OK */
+
+  /* Gallery: switch to auto‑filling grid */
+  .temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
