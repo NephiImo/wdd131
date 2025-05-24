@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Content Page">
+    <meta name="author" content="Nephi O. Imo">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/place.js" defer></script>
+    <title>Country Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/Flag.webp" media="(min-width: 768px)">
+                <img src="images/eagle.webp" alt="Man holding Nigerian flag">
+            </picture>
+            <div class="image-bottom-strip"></div>
+        </div>
+        <section class="info-data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 923,768 km²</li>
+                <li><strong>Population:</strong> 227.9 million</li>
+                <li><strong>Capital:</strong> Abuja</li>
+                <li><strong>Languages:</strong> English, Igbo, Yoruba, Hausa</li>
+                <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+                <li><strong>Time Zone:</strong> West Africa Time (WAT)</li>
+                <li><strong>Calling Code:</strong> +234</li>
+                <li><strong>Internet TLD:</strong> .ng</li>
+            </ul>
+        </section>
+        <hr class="section-divider">
+        <section class="info-weather">
+            <h2>Weather</h2>
+            <img src="images/sun_cloud_rain_icon.svg" alt="Partly Cloudy Icon" class="weather-icon">
+            <ul>
+                <li><strong>Temperature:</strong> 10°C</li>
+                <li><strong>Condition:</strong> Partly Cloudly</li>
+                <li><strong>Wind:</strong> 5km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span>⚽ Nephi Okechukwu Imo ⚽ Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

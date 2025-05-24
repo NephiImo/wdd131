@@ -14,3 +14,7 @@ for (let i = 0; i < studentReport.length; i++) {
         
 //     }
 // });
+
+const fullName = function fullName (first, last) {
+    return '${first} ${last}';
+}
