@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Plan for RayN's Poet - poetry gallery">
+    <meta name="author" content="Raynoi (Nephi Imo)">
+    <title>Site Plan - RayN's Poet</title>
+
+    <!-- Typography: Playfair Display for headings, Poppins for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+    /* --------------------------
+       CSS Variables / Color Schema
+       -------------------------- */
+    :root {
+        --black:       #0A0A0A;   /* Text, dark backgrounds */
+        --navy:        #0C1C2D;   /* Header/Footer background */
+        --teal:        #00707A;   /* Accents, links, buttons */
+        --ivory:       #FDFCFB;   /* Main background, card background */
+        --border-gray: #CCCCCC;   /* Subtle dividers */
+    }
+
+    /* --------------------------
+       Global Reset & Base Styles
+       -------------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--ivory);
+        color: var(--black);
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    h1, h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--teal);
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        border-bottom: 2px solid var(--navy);
+        padding-bottom: 0.3rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    ul {
+        margin-left: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* --------------------------
+       Color Sample Box
+       -------------------------- */
+    .color-sample {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        border: 1px solid var(--border-gray);
+        vertical-align: middle;
+    }
+
+    /* --------------------------
+       Section Spacing
+       -------------------------- */
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    /* --------------------------
+       Wireframe Images
+       -------------------------- */
+    .wireframes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .wireframes img {
+        max-width: 100%;
+        border: 1px solid var(--border-gray);
+        border-radius: 4px;
+    }
+
+    /* --------------------------
+       Footer Notice (File Naming)
+       -------------------------- */
+    .footer-note {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: var(--navy);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Site Plan: RayN's Poet</h1>
+
+    <div class="section">
+        <h2>Site Name</h2>
+        <p><strong>RayN's Poet</strong></p>
+        <p>
+            "RayN's Poet" reflects my poetic identity (Raynoi) and the personal voice behind my work.
+            It's direct, brandable, and easy to associate with a poetry gallery or personal archive.
+        </p>
+        <p><strong>Domain availability:</strong> raynspoet.com (to be checked)</p>
+    </div>
+
+    <div class="section">
+        <h2>Site Purpose</h2>
+        <p>
+            RayN's Poet will serve as an online gallery showcasing my original poetry. Visitors
+            can explore poems by theme (e.g., healing, nature, love), read full texts, and
+            leave feedback. The site aims to reach readers who appreciate modern, introspective 
+            poetry.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Scenarios</h2>
+        <ul>
+            <li>Where can I find poems about healing and spiritual growth?</li>
+            <li>Is there a way I can send feedback or request a custom poem?</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Color Schema</h2>
+        <p>
+            <strong>Primary Background:</strong> Navy Blue <code>#0C1C2D</code>
+            <span class="color-sample" style="background-color: #0C1C2D;"></span> - used for the background of the header/footer and main panels.
+        </p>
+        <p>
+            <strong>Accent Color:</strong> Teal <code>#1AB6B6</code>
+            <span class="color-sample" style="background-color: #00707A;"></span> - used for headings, links, buttons, category tags, and interactive elements.
+        </p>
+        <p>
+            <strong>Text Color:</strong> Black <code>#0A0A0A</code>
+            <span class="color-sample" style="background-color: #0A0A0A;"></span> - used for all text content to ensure readability against the background.
+        </p>
+        <p>
+            <strong>Secondary Background:</strong> Ivory <code>#FDFCFB</code>
+            <span class="color-sample" style="background-color: #FDFCFB;"></span> - used for the poem containers and form backgrounds to create contrast with the primary background.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Typography</h2>
+        <ul>
+            <li><strong>Playfair Display (Serif):</strong> Used for headings (e.g., <code>&lt;h1&gt;</code>), poem titles, and featured text to give a gallery feel.</li>
+            <li><strong>Poppins (Sans-serif):</strong> Used for body text, navigation, form labels, and descriptions for readability and modern aesthetics.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Wireframe</h2>
+        <p> Below are the wireframe sketches for the Home page in both mobile and desktop views.</p>
+        <div class="wireframes">
+            <!-- Mobile View -->
+            <img src="wireframe-mobile.png" alt="Mobile Wireframe">
+            <!-- Desktop View -->
+            <img src="wireframe-desktop.png" alt="Desktop Wireframe">
+        </div>
+    </div>
+
+</body>
+</html>
