@@ -1,0 +1,13 @@
+<script>
+  // Increment review count
+  let count = Number(localStorage.getItem("reviewCount")) || 0;
+  count++;
+  localStorage.setItem("reviewCount", count);
+
+  // Thank you + count
+  document.addEventListener("DOMContentLoaded", () => {
+    const message = document.createElement("p");
+    message.textContent = `Thank you! You’ve submitted ${count} review${count > 1 ? "s" : ""}.`;
+    document.body.appendChild(message);
+  });
+</script>

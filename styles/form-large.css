@@ -1,0 +1,33 @@
+/* form-large.css: Overrides for desktop screens (≥ 768px) */
+
+/* Layout: Centered with more breathing room */
+main {
+  padding: 3rem;
+  font-size: 1.05rem;
+}
+
+/* Star rating layout */
+.star-rating {
+  justify-content: center;
+  gap: 6rem;
+}
+
+/* Checkbox grid layout (3-column if enough space) */
+.checkbox-group {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Input spacing */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  max-width: 600px;
+}
+
+/* Larger button with max-width */
+input[type="submit"] {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}

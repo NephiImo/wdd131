@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form for RayN's Poet - poetry gallery">
+    <meta name="author" content="Nephi Imo">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/form.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Product Review Form</title>
+</head>
+<body>
+
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html">
+
+            <!-- Product Name -->
+            <fieldset>
+                <legend>Product Name</legend>
+                <label for="product">Products:</label>
+                <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </fieldset>    
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="star-rating">
+                    <div class="star-option">
+                        <label for="star1">★</label>
+                        <input type="radio" name="stars" id="star1" value="1" />
+                    </div>
+                    <div class="star-option">
+                        <label for="star2">★★</label>
+                        <input type="radio" name="stars" id="star2" value="2" />
+                    </div>
+                    <div class="star-option">
+                        <label for="star3">★★★</label>
+                        <input type="radio" name="stars" id="star3" value="3" />
+                    </div>
+                    <div class="star-option">
+                        <label for="star4">★★★★</label>
+                        <input type="radio" name="stars" id="star4" value="4" />
+                    </div>
+                    <div class="star-option">
+                        <label for="star5">★★★★★</label>
+                        <input type="radio" name="stars" id="star5" value="5" />
+                    </div>
+                </div>            
+            </fieldset>
+            
+            <!-- Date of Installation -->
+            <fieldset>
+                <legend>Date of Installation</legend>
+                <label for="date">Installation Date:</label>
+                <input type="date" id="date" name="date" required>
+            </fieldset>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product?
+                    <br>(Check all that apply)</legend>
+
+                <div class="checkbox-group">
+                    <div class="box-options">
+                        <input type="checkbox" id="feature1" name="features" value="Durability">
+                        <label for="feature1">Durability</label>
+                    </div>
+                    <div class="box-options">
+                        <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                        <label for="feature2">Ease of Use</label>  
+                    </div>
+                    <div class="box-options">
+                        <input type="checkbox" id="feature3" name="features" value="Peformance">
+                        <label for="feature3">Peformance</label>
+                    </div>
+                    <div class="box-options">
+                        <input type="checkbox" id="feature4" name="features" value="Design">
+                        <label for="feature4">Design</label>
+                    </div>
+                </div>          
+            </fieldset>
+
+            <!-- Written Review -->
+            <fieldset>
+                <legend>Written Review <span style="color: blue;">(Optional)</span></legend>
+                <label for="comments">Your review:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+            </fieldset>
+
+            <!-- User Name -->
+            <fieldset>
+                <legend>Your Name <span style="color: blue;">(Optional)</span></legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name here...">
+            </fieldset>
+
+            <!-- Form Submission Button -->
+            <fieldset>
+                <input type="submit" value="Post Review"></input>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span>⚽ Nephi Okechukwu Imo ⚽ Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
