@@ -31,24 +31,24 @@
                 <legend>Overall Rating</legend>
                 <div class="star-rating">
                     <div class="star-option">
-                        <label for="star1">★</label>
                         <input type="radio" name="stars" id="star1" value="1">
+                        <label for="star1">★</label>
                     </div>
                     <div class="star-option">
-                        <label for="star2">★★</label>
                         <input type="radio" name="stars" id="star2" value="2">
+                        <label for="star2">★★</label>
                     </div>
                     <div class="star-option">
-                        <label for="star3">★★★</label>
                         <input type="radio" name="stars" id="star3" value="3">
+                        <label for="star3">★★★</label>
                     </div>
                     <div class="star-option">
-                        <label for="star4">★★★★</label>
                         <input type="radio" name="stars" id="star4" value="4">
+                        <label for="star4">★★★★</label>
                     </div>
                     <div class="star-option">
-                        <label for="star5">★★★★★</label>
                         <input type="radio" name="stars" id="star5" value="5">
+                        <label for="star5">★★★★★</label>
                     </div>
                 </div>            
             </fieldset>
@@ -67,19 +67,19 @@
 
                 <div class="checkbox-group">
                     <div class="box-options">
-                        <input type="checkbox" id="feature1" name="features" value="Durability">
+                        <input type="checkbox" id="feature1" name="features[]" value="Durability">
                         <label for="feature1">Durability</label>
                     </div>
                     <div class="box-options">
-                        <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                        <input type="checkbox" id="feature2" name="features[]" value="Ease of Use">
                         <label for="feature2">Ease of Use</label>  
                     </div>
                     <div class="box-options">
-                        <input type="checkbox" id="feature3" name="features" value="Peformance">
-                        <label for="feature3">Peformance</label>
+                        <input type="checkbox" id="feature3" name="features[]" value="Performance">
+                        <label for="feature3">Performance</label>
                     </div>
                     <div class="box-options">
-                        <input type="checkbox" id="feature4" name="features" value="Design">
+                        <input type="checkbox" id="feature4" name="features[]" value="Design">
                         <label for="feature4">Design</label>
                     </div>
                 </div>          
@@ -87,16 +87,16 @@
 
             <!-- Written Review -->
             <fieldset>
-                <legend>Written Review <span style="color: blue;">(Optional)</span></legend>
+                <legend>Written Review <span class="optional">(Optional)</span></legend>
                 <label for="comments">Your review:</label>
-                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
             </fieldset>
 
             <!-- User Name -->
             <fieldset>
-                <legend>Your Name <span style="color: blue;">(Optional)</span></legend>
+                <legend>Your Name <span class="optional">(Optional)</span></legend>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name here...">
+                <input type="text" id="name" name="name">
             </fieldset>
 
             <!-- Form Submission Button -->
