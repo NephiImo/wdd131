@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a,
+button {
+    transition: all 0.3s ease;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Header */
+.header {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Main layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-bottom: 2rem;
+}
+
+.categories-section,
+.search-section,
+.recent-section,
+.daily-inspiration,
+.newsletter {
+    background-color: white;
+    padding: 1rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.search-box,
+.newsletter-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.subscribe-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Featured Content */
+.featured-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.featured-poem h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 30%;
+}
+
+/* Gallery Filter */
+.filter-buttons {
+    margin: 2rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: var(--dark-color);
+}
+
+/* Poem Grid */
+.poems-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.poem-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.poem-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.poem-card-grid {
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+.contact-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+.contact-form-section {
+    flex: 1.5;
+    max-width: 600px;
+  }
+
+.contact-social {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}

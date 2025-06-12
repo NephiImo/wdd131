@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RayN's Poet - A poetry gallery of original works by RAYNOI">
+    <meta name="author" content="Nephi Imo">
+    <title>Home | RayN's Poet</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/project.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="nav-container">
+                <a href="index.html" class="logo">RayN's Poet</a>
+                <button class="hamburger" aria-label="Toggle menu"></button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Poems</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+
+        <main class="main-content">
+            <!-- Left Sidebar -->
+            <aside class="sidebar left-sidebar">
+                <section class="categories-section">
+                    <h3>Categories</h3>
+                    <ul class="category-list" id="categoryList">
+                        <!-- Categories will be populated by Javascript -->
+                    </ul>
+                </section>
+
+                <section class="search-section">
+                    <h3>Search</h3>
+                    <input type="text" class="search-box" id="searchInput" placeholder="Search poems..." aria-label="Search poems">
+                </section>
+            </aside>
+
+            <!-- Featured Content -->
+            <section class="featured-content" id="featuredPoemSection">
+                <h1>Poem of the Week</h1>
+                <article class="featured-poem">
+                    <h2 id="featuredTitle">Loading...</h2>
+                    <div class="poem-meta">
+                        <p id="featuredDate"></p>
+                    </div>
+                    <div class="poem-content" id="featuredContent">Please wait while the poem loads...</div>
+                    <button class="read-more-btn" id="readMoreBtn">Read Full Poem</button>
+                </article>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar right-sidebar">
+                <section class="recent-section">
+                    <h3>Recent Poems</h3>
+                    <div id="recentPoems">
+                        <!-- JS will populate -->
+                    </div>
+                </section>
+
+                <section class="daily-inspiration">
+                    <h4>Daily Inspiration</h4>
+                    <p id="inspiration">
+                        <!-- JS will populate -->
+                    </p>
+                </section>
+
+                <section class="newsletter">
+                    <h4>Subscribe</h4>
+                    <p>Get a poem delivered to your inbox</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" id="emailInput" placeholder="Enter your email" required aria-label="Email address">
+                        <button type="submit" class="subscribe-btn" id="subscribeBtn">Subscribe</button>
+                    </form>
+                </section>
+            </aside>
+        </main>
+
+        <!-- From the Gallery -->
+        <section class="preview-gallery">
+            <h2>From the Gallery</h2>
+            <div class="poem-card-grid" id="previewPoemsGrid">
+                <!-- 2-3 Poems will be populated by Javascript -->
+            </div>
+            <a href="gallery.html" class="see-more">See All Poems →</a>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <nav class="footer-nav">
+                    <div class="social-links">
+                        <a href="contact.html">Contact</a>
+                        <a href="about.html">About</a>
+                        <a href="credits.html">References</a>
+                        <a href="mailto:raynoi_poetry@outlook.com">Email</a>
+                    </div>
+                </nav>
+                <p>Follow me on <a href="https://www.instagram.com/raynoi_" target="_blank">Instagram😁</a></p>
+                <p>&copy; <span id="currentYear"></span> RayN's Poet | All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
