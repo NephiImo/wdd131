@@ -6,9 +6,11 @@
     <meta name="description" content="RayN's Poet - A poetry gallery of original works by RAYNOI">
     <meta name="author" content="Nephi Imo">
     <title>Home | RayN's Poet</title>
+
     <link rel="stylesheet" href="styles/project.css">
     <link rel="stylesheet" href="styles/project-large.css" media="screen and (min-width: 768px)">
     <script src="scripts/project.js" defer></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,9 +18,9 @@
         <header class="header">
             <div class="nav-container">
                 <a href="index.html" class="logo">RayN's Poet</a>
-                <button class="hamburger" aria-label="Toggle menu"></button>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu"></button>
             </div>
-            <ul class="nav-menu">
+            <ul id="nav-menu" class="nav-menu" role="navigation">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="gallery.html">Poems</a></li>
                 <li><a href="about.html">About</a></li>
@@ -30,21 +32,23 @@
             <!-- Left Sidebar -->
             <aside class="sidebar left-sidebar">
                 <section class="categories-section">
-                    <h3>Categories</h3>
+                    <h2>Categories</h2>
                     <ul class="category-list" id="categoryList">
-                        <!-- Categories will be populated by Javascript -->
+                        <!-- JS will populate this list -->
                     </ul>
                 </section>
 
-                <section class="search-section">
-                    <h3>Search</h3>
-                    <input type="text" class="search-box" id="searchInput" placeholder="Search poems..." aria-label="Search poems">
-                </section>
+                <form class="search-form" id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search poems..." />
+                    <button class="search-btn" type="submit">Search</button>
+                </form>
             </aside>
 
             <!-- Featured Content -->
             <section class="featured-content" id="featuredPoemSection">
-                <h1>Poem of the Week</h1>
+                <h1>Welcome to RayN's Poet</h1>
+                <p class="intro-text">Explore the echoes of soul-painting poetry from RAYNOI. Here's this week’s featured piece:</p>
+
                 <article class="featured-poem">
                     <h2 id="featuredTitle">Loading...</h2>
                     <div class="poem-meta">
@@ -58,21 +62,21 @@
             <!-- Right Sidebar -->
             <aside class="sidebar right-sidebar">
                 <section class="recent-section">
-                    <h3>Recent Poems</h3>
-                    <div id="recentPoems">
+                    <h2>Recent Poems</h2>
+                    <div class="recent-poems" id="recentPoems">
                         <!-- JS will populate -->
                     </div>
                 </section>
 
                 <section class="daily-inspiration">
-                    <h4>Daily Inspiration</h4>
+                    <h2>Daily Inspiration</h2>
                     <p id="inspiration">
                         <!-- JS will populate -->
                     </p>
                 </section>
 
                 <section class="newsletter">
-                    <h4>Subscribe</h4>
+                    <h2>Subscribe</h2>
                     <p>Get a poem delivered to your inbox</p>
                     <form class="newsletter-form" id="newsletterForm">
                         <input type="email" class="newsletter-input" id="emailInput" placeholder="Enter your email" required aria-label="Email address">
@@ -86,7 +90,7 @@
         <section class="preview-gallery">
             <h2>From the Gallery</h2>
             <div class="poem-card-grid" id="previewPoemsGrid">
-                <!-- 2-3 Poems will be populated by Javascript -->
+                <!-- Preview Poems populated by Javascript -->
             </div>
             <a href="gallery.html" class="see-more">See All Poems →</a>
         </section>

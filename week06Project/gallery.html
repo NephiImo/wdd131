@@ -15,34 +15,40 @@
     <header class="header">
         <div class="nav-container">
             <a href="index.html" class="logo">RayN's Poet</a>
-            <button class="hamburger" aria-label="Toggle menu"></button>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu"></button>
         </div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="gallery.html">Poems</a></li>
+        <ul id="nav-menu" class="nav-menu" role="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Poems</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
-    <main class="main-content">
+
+    <main class="main-content gallery-page">
         <section class="poetry-gallery">
             <div class="gallery-header">
-                <h1>Poetry Gallery</h1>
-                <p>Explore by mood or message that speaks to you.</p>
+                <div class="gallery-top">
+                    <div class="gallery-intro">
+                        <h1>Poetry Gallery</h1>
+                        <p>Explore by mood or message that speaks to you.</p>
+                    </div>
+                        <div class="search-section">
+                            <input 
+                                type="text"
+                                class="search-box"
+                                id="searchBox"
+                                placeholder="Search poems..."
+                                aria-label="Search poems">
+                        </div>
+                </div>
+
                 <div class="filter-buttons" id="filterButtons" role="tablist">
-                    <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All</button>
-                    <button class="filter-btn" data-category="healing" role="tab" aria-selected="false">Healing</button>
-                    <button class="filter-btn" data-category="nature" role="tab" aria-selected="false">Nature</button>
-                    <button class="filter-btn" data-category="love" role="tab" aria-selected="false">Love</button>
-                    <button class="filter-btn" data-category="spiritual" role="tab" aria-selected="false">Spiritual</button>
+                    <!-- JS will populate -->
                 </div>
             </div>
-            <div class="poems-grid" id="poemsGrid">
-                <!-- JS will populate -->
-            </div>
-            <div class="loading hidden" id="loadingIndicator">
-                <p>Loading poems...</p>
-            </div>
+
+            <!-- JS will populate this list with poems -->
         </section>
     </main>
 
@@ -56,10 +62,10 @@
                     <a href="mailto:raynoi_poetry@outlook.com">Email</a>
                 </div>
             </nav>
-            <p>Follow me on <a href="https://www.instagram.com/raynoi_" target="_blank">Instagram😁</a></p>
+            <p>Follow me on <a href="https://www.instagram.com/raynoi_" target="_blank" rel="noopener noreferrer">Instagram😁</a></p>
             <p>&copy; <span id="currentYear"></span> RayN's Poet | All rights reserved.</p>
         </div>
     </footer>
-    
+
 </body>
 </html>

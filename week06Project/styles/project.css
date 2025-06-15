@@ -17,8 +17,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #0A0A0A;
+    font-family: var(--font-body);
+    color: var(--text-color);
     background-color: var(--light-color);
     line-height: 1.6;
     padding: 1rem;
@@ -49,7 +49,7 @@ html {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -123,19 +123,118 @@ html {
     margin-top: 1rem;
 }
 
-.categories-section,
-.search-section,
 .recent-section,
-.daily-inspiration,
 .newsletter {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.search-box,
+/* Categories Section */
+.categories-section {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.categories-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.category-list li a:hover {
+  color: var(--dark-color);
+}
+
+.daily-inspiration {
+    background-color: #f0f9f9;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+    font-style: italic;
+    color: var(--dark-color);
+}
+
+.recent-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#recentPoems .recent-poems {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+#recentPoems .recent-poems:last-child {
+    border-bottom: none;
+}
+
+.recent-poems p a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.recent-poems p a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
 .newsletter-input {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
+}
+
+.search-box {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    color: white;
+    cursor: pointer;
+    width: 20%;
 }
 
 .subscribe-btn {
@@ -155,9 +254,106 @@ html {
     background-color: var(--light-color);
 }
 
+.featured-poem {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--light-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 6px;
+}
+
 .featured-poem h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
     color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.poem-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .poem-container {
+        flex-direction: row;
+        justify-content: space-between;
+  }
+
+  .poem-content {
+    flex: 2;
+    margin-right: 2rem;
+  }
+
+  .recent-poems {
+    flex: 1;
+    border-left: 2px solid #ccc;
+    padding-left: 1rem;
+  }
+}
+
+.poem-text {
+    white-space: pre-wrap;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: -2rem;
+}
+
+.back-btn {
+    margin-bottom: 1rem;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.nav-share button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-share a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: navy;
+  font-weight: 500;
+}
+
+.poem-meta {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.poem-content {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-wrap;
 }
 
 .read-more-btn {
@@ -165,36 +361,15 @@ html {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.5rem;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    width: 100%;
+    transition: background 0.3s ease;
 }
 
-/* Gallery Filter(Poems Page) */
-.filter-buttons {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.filter-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
-.filter-btn.active {
+.read-more-btn:hover {
     background-color: var(--dark-color);
-}
-
-/* Poem Grid */
-.poems-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
 }
 
 /* From the Gallery */
@@ -205,34 +380,105 @@ html {
 }
 
 .preview-gallery h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.5rem;
     color: var(--dark-color);
     margin-bottom: 1.5rem;
 }
 
-.poem-card-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
+/* Poem Gallery */
+.poetry-gallery {
+    padding: 2rem 1rem;
 }
 
+.gallery-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color, teal);
+    margin-bottom: 0.25rem;
+}
+
+.gallery-header p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Filter Buttons */
+    .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color, teal);
+    color: white;
+}
+
+/* Poems Grid */
+.poems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+/* Poem Card */
 .poem-card {
     background-color: white;
-    border-left: 4px solid var(--primary-color);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 320px;
-    text-align: left;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .poem-card h3 {
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: var(--dark-color);
+    color: var(--primary-color, teal);
+}
+
+.poem-card h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.poem-card p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
 }
 
 .poem-snippet {
@@ -251,7 +497,7 @@ html {
     text-decoration: underline;
 }
 
-.see-more-link {
+.see-more {
     display: inline-block;
     margin-top: 2rem;
     color: var(--primary-color);
@@ -259,7 +505,7 @@ html {
     font-weight: 500;
 }
 
-.see-more-link:hover {
+.see-more:hover {
     text-decoration: underline;
 }
 
@@ -357,4 +603,121 @@ html {
 
 .contact-social a:hover {
     text-decoration: underline;
+}
+
+.contact-form button {
+    background-color: teal;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+    background-color: #004d4d;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
+    background-color: #003737;
+}
+
+/* About Page */
+.about-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.poetic-backstory,
+.philosophy {
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.about-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.about-intro .tagline {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.poetic-backstory h2,
+.philosophy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.poem-style {
+    font-family: var(--font-heading);
+    line-height: 1.8;
+    font-size: 1rem;
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    color: #222;
+}
+
+.styled-box {
+    background-color: #fdfdfd;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.inspiration-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    padding: 0.5rem 0;
+}
+
+.social-share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.social-share span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.social-share a {
+    padding: 0.4rem 0.6rem;
+    background-color: var(--dark-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-share a:hover {
+    background-color: var(--primary-color);
 }
